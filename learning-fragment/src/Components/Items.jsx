@@ -1,14 +1,16 @@
 import styles from "./Items.module.css";
 
-const Item = (props) => {
-    const clickhandeler = ({ }) => {
+const Item = ({ fooditems }) => {
+    const clickhandeler = (event) => {
+        console.log(`${fooditems} is clicked`)
+        console.log(event)
 
     }
     return (
         <>
-            <li className={`list-group-item ${styles["rn-item"]}`} id={props.fooditems}>
-                <span>{props.fooditems}</span>
-                <button onClick={() => { console.log(`${props.fooditems} being Bough`) }} className={` btn btn-info ${styles.Rsbtn}`}>Buy</button>
+            <li className={`list-group-item ${styles["rn-item"]}`} id={fooditems}>
+                <span>{fooditems}</span>
+                <button onClick={(event) => clickhandeler(event)} className={`btn btn-info ${styles.Rsbtn}`}>Buy</button>
             </li>
         </>
     )
