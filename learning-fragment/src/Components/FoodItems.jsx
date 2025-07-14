@@ -1,10 +1,14 @@
 import Item from "./Items";
 
-const Fooditems = (props) => {
+const Fooditems = ({ fooditems }) => {
+    const clickhandeler = (item) => {
+        console.log(`${item} is clicked`)
+    }
+
     return (
         <ul className="list-group">
-            {props.fooditems.map((item) => {
-                return <Item fooditems={item} key={item} />
+            {fooditems.map((item) => {
+                return <Item fooditems={item} key={item} clickhandeler={() => clickhandeler(item)} />
             }
             )}
         </ul>
