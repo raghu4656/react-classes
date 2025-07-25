@@ -1,0 +1,26 @@
+.Appcontainer {
+    display: flex;
+}
+
+.hf {
+    width: 100%;
+}
+
+.sidebar {
+    min-height: 100vh;
+    position: sticky;
+}
+
+.appcn {
+    padding-top: 15px;
+    padding-left: 1%;
+}
+
+.post-card {
+    box-shadow: 2px 2px 20px rgba(0, 0, 255, 0.318);
+    transition: transform .2s;
+}
+
+.delete-buttone:hover {
+    cursor: pointer;
+}
